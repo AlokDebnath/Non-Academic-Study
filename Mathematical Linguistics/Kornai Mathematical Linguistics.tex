@@ -19,7 +19,7 @@
   have attempted to capture those in the footnotes. For those which are crucial
   a relevant section has been added, which can be used. This is only a summary
   of the book, and I have skimmed over a lot of the parts, some of which may
-  be of interest to the reader. If this is so, I recommend reading the 
+  be of interest to the reader. If this is so, I recommend reading the
   textbook.
 \end{abstract}
 
@@ -60,8 +60,40 @@ supposedly governed by a thousands of rules, wheras the statistical methods of
 macroscopic levels (Markov assumption, for example) is a reasonable
 approximation of the behavior of Natural Language. Macroscopic techniques yeild
 only generalizations of mesoscopic systems. Further, statistical quantities
-of interest are linked "only very indirectly" to the object of study, which
-requires very specific techniques in order to decide which parameters are of
-interest and which are to be left unmodeled.
+of interest are linked "only very indirectly" to the objects of interest and
+therefore there are special techniques that must be employed in order to decide
+which variables should be left unmodeled.
+
+\chapter{The elements}
+
+Fundamentally, enumaration of the set of objects useful to linguistics is an
+one of the approaches to analyzing language. This enumeration, or generation
+of the set of objects is an important topic of study. Along with generation,
+another fundamental problem being solved is one of understanding set membership
+and determining whether an object belongs to this set. This can be done by
+generating the entire set and comparing the input against each one of the
+generated objects, or by constructing a grammar which generates a language
+against which the object in question can be compared.
+
+\section{Generation}
+
+Given a set of primitive elements $E$ and a set of non-procedural generation
+rules $R$, it can be stated that $\forall x, y \in E,\, r \in R,\, \exists z
+\text{ s.t. } z = r(x,y)$. Another perspective on the same is $z \rightarrow_r
+xy$, \textit{i.e.} $z$ directly generates $x$ and $y$. The smallest collection
+of objects closed under direct generation $r \in R$ which contains all the
+elements of $E$ is called the set generated from $E$ by $R$.
+
+Generative definitions have a notion of equality, which may be derivational
+(stronger as it depends on how the object was generated, not an abstract
+notion). Derivations can be mono- or multi-stratal, as in deriving via some
+well-defined intermediate state. In order to understand generative defintions
+better, a few examplesa are provided.
+
+\subsection{Wang tilings}
+
+\textbf{Problem Definition}: Let $C$ be a finite set of colors and $S$ be a
+finite set of square tiles, colored on the edges according to a generative
+function $e : S \rightarrow C^4 $. Arrange the tiles such that the adjacent
 
 \end{document}
