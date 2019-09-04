@@ -95,5 +95,59 @@ better, a few examplesa are provided.
 \textbf{Problem Definition}: Let $C$ be a finite set of colors and $S$ be a
 finite set of square tiles, colored on the edges according to a generative
 function $e : S \rightarrow C^4 $. Arrange the tiles such that the adjacent
+edges of the same tile are of the same color. Therefore:
+
+$$
+i, j \in \mathcal{Z} \text{, } u, v \in S \text{, and } \pi_n \in R \forall
+n \in \{1, 2, 3, 4 \}\\
+
+\therefore \text{ the four production rules are: } \\
+\pi_3(e(i, j)) = \pi_1(e(i, j + 1)) \\
+\pi_4(e(i, j)) = \pi_2(e(i + 1, j)) \\
+\pi_2(e(i, j)) = \pi_4(e(i + 1, j)) \\
+\pi_1(e(i, j)) = \pi_3(e(i, j + 1))
+$$
+
+\texxtbf{Discussion} The definition associated with Wang tiling is not entirely
+generative, because of the following reasons:
+\begin{enumerate}
+  \item The definition relies on externally provided functions and objects,
+  \item The rules are well-formedness conditions, not rules of production and
+        in order to make that production rules, external constraints are
+        necessary,
+  \item The well formedness conditions are not recursively defined.
+\end{enumerate}
+
+\textbf{Extending the Problem}: It is recursively undecidable whther a given
+inventory of tiles $E$ can yeild a Wang tiling.
+
+\subsection{Groups as Generators}
+
+\textbf{Problem Definition}: Let $E$ be a set of generators $g_1, g_2, ..., g_k
+$ and their inverses $g_1^{-1}, g_2^{-1}, ..., g_k{^-1}$. Let $R$ contain the
+product and cancellation rules. Formal products with usual rules of form a free
+group over $k$, and without the inverses and cancellation rules, a free monoid
+is formed over $k$ generators.
+
+\textbf{Discussion}: It is in general undecidable whether a formal product of
+generators is included in the kernel or not. Note that the defining relations
+can be considered a part of production rules as well as equality relation.
+
+\subsection{Herbrand Universes}
+
+\textbf{Problem Definition}: First order languages consist of logical symbols
+alongwith some constraints, and function and relation symbols. In Herbrand
+universes, the elements $E$ are the onject constraints on the first order
+logic. Rigourously,
+$$
+\forall x_i \in E, \\
+f(\cdot) \text{ is a function constant of arity } n,\, f(x_i) \in E
+$$
+
+\textbf{Discussion}: Herbrand universes are purely formula based and is a
+good example of generative definitions. However, usig first order logic
+abstracts away many important properties of language.
+
+\section{Axioms, Rules and Constraints}
 
 \end{document}
