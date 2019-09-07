@@ -124,7 +124,7 @@ inventory of tiles $E$ can yeild a Wang tiling.
 \subsection{Groups as Generators}
 
 \textbf{Problem Definition}: Let $E$ be a set of generators $g_1, g_2, ..., g_k
-$ and their inverses $g_1^{-1}, g_2^{-1}, ..., g_k{^-1}$. Let $R$ contain the
+$ and their inverses $g_1^{-1}, g_2^{-1}, ..., g_k^{-1}$. Let $R$ contain the
 product and cancellation rules. Formal products with usual rules of form a free
 group over $k$, and without the inverses and cancellation rules, a free monoid
 is formed over $k$ generators.
@@ -150,6 +150,86 @@ abstracts away many important properties of language.
 
 \section{Axioms, Rules and Constraints}
 
+One of the ways of contructing a system that undertands a language's
+grammaticality is by propogating it through a set of rules or axioms, and
+defining a group of combinatorial operations that preserve this notion of
+grammaticality. Analogously, most transformations in grammars are seen as
+applications of these rules followed by "cleaning up". Similarly the
+characterization of the grammatical forms can be done using an axiomatic
+system, the difference being that the starting constructions are abstract
+such as words and a well defined hierarchy or representing the system (a
+combination rule for the set of words, for example, is established).
 
+\subsection{Balanced parenthesis}
+
+\textbf{Problem Definition}: Given a series of parenthesis, there exists a well
+formedness condition that determines that given a scoring function, the overall
+score of the sequence of parenthesis never falls below a given value, and it is
+a given value at the end of the series.
+
+For example: If '(' is provided the number '$+1$' and ')' are provided '$-1$',
+then the value of the sequence on addition should never drop below $0$ and the
+value at the end of the sequence should be $0$.
+
+\textbf{Discussion}: It is seen that the WFCs here rely on a transformation of
+the problem into a more computable domain, where there exists a homomorphism
+between both the elements and the rules that govern these elements (operations)
+which are in the original set.
+
+Instead of considering a score computation function in $\mathcal{Z}$, it is
+better to consider a mapping to a finite structure $G$, with well understood
+rules of combination, which allows disjuntive assignments. This makes the well
+formedness constraints based entirely on the combiantion yeilding a desirable
+result. The resulting desired combiantion allows for the constitution of a
+certificate of membership to a grammar defined by a tranformation (in this case
+$c: W \rightarrow 2^G$).
+
+\subsection{Link Gramamrs}
+
+Link grammars are a generalization of the Wang tiling problem. Link grammars
+build on relations between pairs of words, which is similar to dependency
+grammrs, but unlike dependency grammars, directionality is optional. The
+introduction of link types and coloring multiplanar link grammars are
+extensions of link grammars which makes them closely associted with categorial
+grammars.
+
+There is a fundamental difference between truth and grammaticality. The above
+grammars defines the set of distinguished string and its cosets as well.
+In categorial grammars, the object of inquiry extends from the strings of
+words for which multiplication of the associated category yeilds the
+distinguished generator but also those which might yeild another generator
+or any specific word $G$. For example, it is possible to identify a grammatical
+noun phrase which is not a grammatical sentence, while a gramamtical sentence
+might have an ungramamtical noun phrase \footnote{This claim that the author,
+makes in this sentence is dubious to say the very least, because an
+ungrammtical noun phrase would not be a part of a grammtical sentene. The
+example provided for this sentence is: "the house had seven gables" where the
+noun phrase is not ungramamtical. However this is a minor point. The more
+pressing matter at hand is the claim that grammaticality is not compositional,
+which is absurd. However, it is to be noted that the sentence has no truth
+value, provided grammaticality had some relation to the truth value.}
+
+In logic, a model is only unique in the degernate case, as the Lowenheim-Skolem
+theorems show that an inifinite model can produce as many isomorphic models as
+the cardinals. Grammars on the other hand are unique constrained on
+parameterization, in the sense that given an appropriate value of each
+paramter used to determine each model, it defines a unique model.
+
+\subsection{Undergeneration and Overgeneration}
+The uniqueness of models results in overgeneration and undergeneration. If some
+$c : W \rightarrow 2^G$ generates some string $w_1, w_2, w_3, ..., w_n \notin
+M$ where $M$ is the model structure, and $w_1, w_2, w_3, ..., w_n$ belongs to
+the yeild of $c$ then the grammar is undergenerating. Similarly, we define
+overgeneration.
+
+The generative power of a system can be based on the specificity of the
+properties under study, and in other cases there is utility to overgeneration.
+Constraint-based theories also have the same over- and under-generation issues.
+
+\section{String Rewriting}
+Defining:
+\begin{enumerate}
+  \item 
+\end{enumerate}
 
 \end{document}
